@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ZTokensAndRatesHelper
+    network: arbitrum-one
+    source:
+      address: "0x242C07DD5AAC30A94dc36bF09F2358C4A4aa9D13"
+      abi: ZTokensAndRatesHelper
+      startBlock: 160754128
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - OwnershipTransferred
+        - deployedContracts
+      abis:
+        - name: ZTokensAndRatesHelper
+          file: ./abis/ZTokensAndRatesHelper.json
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: deployedContracts(address,address)
+          handler: handledeployedContracts
+      file: ./src/z-tokens-and-rates-helper.ts
