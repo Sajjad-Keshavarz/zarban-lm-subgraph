@@ -706,3 +706,39 @@ type UsdEthPriceHistoryItem @entity {
   price: BigInt!
   timestamp: Int!
 }
+
+type IncentivizedAction @entity {
+  """
+  txHash
+  """
+  id: ID!
+  incentivesController: IncentivesController!
+  user: User!
+  amount: BigInt!
+}
+
+type ClaimIncentiveCall @entity {
+  """
+  txHash
+  """
+  id: ID!
+  incentivesController: IncentivesController!
+  user: User!
+  amount: BigInt!
+}
+
+
+type IncentivesController @entity {
+  """
+  address of the incentives controller
+  """
+  id: ID!
+  rewardToken: Bytes!
+  rewardTokenDecimals: Int!
+  rewardTokenSymbol: String!
+  precision: Int!
+  emissionEndTimestamp: Int!
+
+  incentivizedActions: [IncentivizedAction!]! @derivedFrom(field: "incentivesController")
+  claimIncentives: [ClaimIncentiveCall!]! @derivedFrom(field: "incentivesController")
+}
