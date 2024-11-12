@@ -699,3 +699,10 @@ type SwapHistory @entity {
   receivedAmount: BigInt!
   swapType: String!
 }
+
+type UsdEthPriceHistoryItem @entity {
+  id: ID!
+  oracle: PriceOracle!
+  price: BigInt!
+  timestamp: Int!
+}
