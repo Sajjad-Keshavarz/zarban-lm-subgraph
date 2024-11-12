@@ -3,6 +3,30 @@
     "ZTokensAndRatesHelper": {
       "address": "0x242C07DD5AAC30A94dc36bF09F2358C4A4aa9D13",
       "startBlock": 160754128
+    },
+    "LendingPoolAddressesProvider": {
+      "address": "0x11804AC1d57B8b703AEDDCcE3dDB54844d123632"
+    },
+    "LendingPoolAddressesProviderRegistry": {
+      "address": "0x83eD755fD398A64Ba204504B2520433b17467E71"
+    },
+    "LendingPool": {
+      "address": "0x381D5e078b8ce96489517E326377eF6BEE815D5c"
+    },
+    "LendingPoolConfigurator": {
+      "address": "0x4a8b4893B1225F2c0D9175Df146b4E0110bf20C6"
+    },
+    "ZToken": {
+      "address": "0x33082B91526decc560FE4FFA002353fD05f75a3a"
+    },
+    "StableDebtToken": {
+      "address": "0x79DC35D2D66d89C5F2ca86346d9bC9cd4DCAD71B"
+    },
+    "VariableDebtToken": {
+      "address": "0xe5713E5c9CF9CA82c4dFB4E37603ac438f157B6b"
+    },
+    "ZarbanOracle": {
+      "address": "0x3d6A1200C2Cda34D1497D66abA0e526f071629A9"
     }
   }
 }
